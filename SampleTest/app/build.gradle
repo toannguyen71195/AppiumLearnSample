@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.example.toanbnguyen.sampletest"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support:appcompat-v7:23.3.0'
+    androidTestCompile files('libs/commons-codec-1.10.jar')
+    androidTestCompile files('libs/commons-collections-3.2.1.jar')
+    androidTestCompile files('libs/commons-exec-1.3.jar')
+    androidTestCompile files('libs/commons-io-2.4.jar')
+    androidTestCompile files('libs/commons-lang3-3.4.jar')
+    androidTestCompile files('libs/commons-logging-1.1.3.jar')
+    androidTestCompile files('libs/commons-validator-1.4.1.jar')
+    androidTestCompile files('libs/gson-2.3.1.jar')
+    androidTestCompile files('libs/guava-18.0.jar')
+    androidTestCompile files('libs/hamcrest-core-1.3.jar')
+    androidTestCompile files('libs/java-client-3.4.1.jar')
+    androidTestCompile files('libs/junit-4.12.jar')
+    androidTestCompile files('libs/selenium-java-2.47.1.jar')
+    androidTestCompile files('libs/apache-mime4j-0.6.jar')
+    androidTestCompile files('libs/httpmime-4.4.1.jar')
+    androidTestCompile files('libs/httpcore-4.4.1.jar')
+    androidTestCompile files('libs/httpclient-4.4.1.jar')
+}
